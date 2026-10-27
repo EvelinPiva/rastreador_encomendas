@@ -35,7 +35,7 @@ app.use(authMiddleware)
 
 // Rotas privadas do motorista (CRUD Completo)
 app.get('/motoristas', motoristaController.listar)
-app.get('/motorista/buscarNome/:nome', motoristaController.consultarNome)
+app.get('/motorista/buscarNome/:nome', motoristaController.consultar)
 app.get('/motorista/:id',motoristaController.consultar)
 app.put('/motorista/:id', motoristaController.atualizar)
 app.delete('/motorista/:id', motoristaController.apagar)
@@ -44,7 +44,7 @@ app.delete('/motorista/:id', motoristaController.apagar)
 app.post('/carga', cargaController.cadastrar)
 app.post('/entrega', entregaController.cadastrar)
 app.put('/entrega/:id', entregaController.atualizar)
-app.get('/entregas', entregaController.listarAgenda)
+app.get('/entregas', entregaController.listar)
 
 app.post('/funcionario',funcionarioController.cadastrar)
 
